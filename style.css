@@ -39,6 +39,7 @@ nav ul li a:hover, a.active{
     border-radius: 5px;
 }
 .main-content{
+    height: 100%;
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 70px;
@@ -122,4 +123,27 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+.row{
+    height: 500px;
+}
+.row p{
+    font-size: 20px;
+    color: white;
+}
+.row h3{
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+.confirmation-form{
+    background-color: white;
+    width: 200px;
+    position: relative;
+    top: 10px;
+    left: 200px;
+}
+.back{
+    position: relative;
+    top: 80px;
 }

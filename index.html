@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <!--Header and Menu Section-->
+    <!--Header and Menu div-->
     <header class="container">
         <nav>
             <ul>
@@ -28,12 +28,12 @@
         </nav>
     </header>
 
-    <!--Booking Section-->
-    <main class="main-content container">
+    <!--Booking div-->
+    <main class="main-content container" id="main-display">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
 
 
@@ -41,11 +41,11 @@
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh" id="from">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input class="inp-style" type="text" name="" placeholder="New York, United States" id="destination">
             </div>
             <div class="inputs">
                 <div class="input-group">
@@ -62,9 +62,9 @@
                     <label for="">First Class ($150)</label><br>
                 </div>
                 <div class="input-group number-spinner">
-                    <button class="btn btn-default" id="minus-btn" ><i class="fa fa-minus" ></i></button>
-                    <input type="text" class="form-control text-center " id="product-id1" value="0">
-                    <button class="btn btn-default" id="plus-btn"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-default" id="minus-btn"  onclick="ticketNumberHandler(false,'first-class')" ><i class="fa fa-minus" ></i></button>
+                    <input type="text" class="form-control text-center " id="first-class" value="0">
+                    <button class="btn btn-default" id="plus-btn" onclick="ticketNumberHandler(true,'first-class')"><i class="fa fa-plus"></i></button>
                 </div>
             </div>
             
@@ -73,9 +73,9 @@
                     <label for="">Economy ($100)</label>
                 </div>
                 <div class="input-group number-spinner">
-                    <button class="btn btn-default" id="minus-btn" ><i class="fa fa-minus"></i></button>
-                    <input type="text" class="form-control text-center " id="product-id1" value="0">
-                    <button class="btn btn-default" id="plus-btn"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-default" id="minus-btn" onclick="ticketNumberHandler(false,'economy-class')"><i class="fa fa-minus"></i></button>
+                    <input type="text" class="form-control text-center " id="economy-class" value="0">
+                    <button class="btn btn-default" id="plus-btn" onclick="ticketNumberHandler(true,'economy-class')"><i class="fa fa-plus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -84,7 +84,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="subtotal">$00</p>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax">$00 </p>
                     </div>
                 </div>
                 <hr>
@@ -102,20 +102,36 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p  id="total">$00</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style" id="book" onclick="book()">Book Now</button>
         </div>
     </main>
+    <!-- <div class="booking-info container" id="confirmation">
+        <div class="info">
+            <h1>Cruise Queen</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
+        </div>
+        <div class="booking-form">
+            <h3><i class="fa fa-check-square"></i>Your Booking Has Been Confirmed</h3>
+        </div>
+    </div> -->
+    <div class="container mt-5 p-5 main-content" id="confirmation">
+        <div class="row">
+            <h1>Cruise Queen</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="col-7 confirmation-form">
+                <h3><i class="fa fa-check-square" style="color:green;"></i> Your Booking Has Been Confirmed</h3>
+            <button class="btn-style back" id="back" onclick="back()">Go Back</button>
 
-    <!--Thank You-->
-    <script>
-        document.getElementById('plus-btn').addEventListener('click',function(){
+            </div>
             
-        })
-    </script>
+        </div>
+      </div>
+    <!--Thank You-->
+    <script src="script.js"></script>
 </body>
 
 </html>
