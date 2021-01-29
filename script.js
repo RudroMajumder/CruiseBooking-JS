@@ -36,8 +36,8 @@ function book() {
     confirmation_area.style.display = 'block'; 
 }
 function back() {
-    const confirmation_area = document.getElementById('confirmation');
+     confirmation_area = document.getElementById('confirmation');
     confirmation_area.style.display = 'none'; 
-    const booking_area = document.getElementById('main-display');
-    booking_area.style.display = 'block';
+     booking_area = document.getElementById('main-display');
+    booking_area.style.display = 'flex';
 }
