@@ -49,10 +49,20 @@ function back() {
     confirmation_area.style.display = 'none'; 
      booking_area = document.getElementById('main-display');
     booking_area.style.display = 'flex';
+    reset('from');
+    reset('destination');
+    reset('departure-date');
+    reset('return-date');
+    reset('first-class');
+    reset('economy-class');
+    document.getElementById('subtotal').innerText = "";
+    document.getElementById('tax').innerText = "";
+    document.getElementById('total').innerText = "";
 }
 function showConfirmation( getElementId , setElementId ) {
     const setElement = document.getElementById(getElementId).value;
-    document.getElementById( setElementId ).value = setElement;
-
-    
+    document.getElementById( setElementId ).value = setElement;  
+}
+function reset(id) {
+    document.getElementById( id ).value = "";
 }
