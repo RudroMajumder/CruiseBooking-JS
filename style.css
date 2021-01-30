@@ -136,13 +136,3 @@ nav ul li a:hover, a.active{
     top: 20px;
     text-align: center;
 }
-.confirmation-form{
-    background-color: white;
-    width: 200px;
-    position: relative;
-    left: 200px;
-}
-/* .back{
-    position: relative;
-    top: 80px;
-} */
