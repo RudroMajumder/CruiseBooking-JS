@@ -44,17 +44,17 @@
                 <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh" id="from">
             </div>
             <div class="input-group">
-                <label for="">Destination</label>
+                <label for=""> Cruise Destination</label>
                 <input class="inp-style" type="text" name="" placeholder="New York, United States" id="destination">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" type="date" name="" id="departure-date">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" type="date" name=""  id="return-date">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -110,20 +110,63 @@
         </div>
     </main>
 
-    <div class="container mt-5 p-5 main-content" id="confirmation">
-        <div class="row">
+    <div class="container main-content" id="confirmation-display">
+        <div class="row mt-5 p-5">
             <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <div class="col-7 confirmation-form">
-                <h3><i class="fa fa-check-square" style="color:green;"></i> Your Booking Has Been Confirmed</h3>
-            <button class="btn-style back" id="back" onclick="back()">Go Back</button>
-
-            </div>
-            
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, dolores dolorem. Eos voluptatem alias amet voluptates numquam? Sed, sapiente nemo.</p>
+            <div class="col-7 booking-form">
+                <h3><i class="fa fa-check-square" style="color:green;font-size: 30px;"></i> Your Booking Has Been Confirmed</h3>
+                <div class="inputs mt-5 ">
+                    <div class="input-group ">
+                        <label for="">Cruise From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh" id="book-from">
+                    </div>
+                    <div class="input-group">
+                        <label for=""> Cruise Destination</label>
+                        <input class="inp-style" type="text" name="" placeholder="New York, United States" id="book-destination">
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="" id="departure">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="" id="return">
+                    </div>
+                </div>
+                <h4> Number of Tickets</h4>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="">First Class</label>
+                        <input class="inp-style" type="number" name="" id="first">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Economy Class</label>
+                        <input class="inp-style" type="number" name="" id="economy">
+                    </div>
+                </div>
+                <div class="calculations">
+                    <hr> 
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="confirm-total" style="color: black;">$00</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-style back" id="back" onclick="back()">Go Back</button>
+            </div>  
         </div>
       </div>
     <!--Thank You-->
     <script src="script.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>
